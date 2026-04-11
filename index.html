@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WPM Portfólio</title>
 <meta name="description" content="Projetos, estudos de caso, documentação e contato profissional — Wallace Phillip Maclayne">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="Wallace Phillip Maclayne">
+<meta name="theme-color" content="#07070d">
+<link rel="canonical" href="https://wphillipmaclayne.github.io/WPM-SAP-PORTIFOLIO/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WPM Portfólio">
+<meta property="og:description" content="Projetos, estudos de caso, documentação e contato profissional — Wallace Phillip Maclayne">
+<meta property="og:url" content="https://wphillipmaclayne.github.io/WPM-SAP-PORTIFOLIO/">
+<meta property="og:site_name" content="WPM Portfólio">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="WPM Portfólio">
+<meta name="twitter:description" content="Projetos, estudos de caso, documentação e contato profissional — Wallace Phillip Maclayne">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -32,8 +45,23 @@ body{
   min-height:100vh;
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
-  cursor:none;
 }
+.has-custom-cursor{cursor:none}
+.skip-link{
+  position:absolute;
+  left:16px;
+  top:-48px;
+  z-index:10001;
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid var(--purple);
+  background:var(--bg);
+  color:var(--text);
+  text-decoration:none;
+  font-size:.86rem;
+  transition:top .2s ease;
+}
+.skip-link:focus{top:16px}
 
 /* ── Custom cursor (desktop only) ── */
 .cursor{
@@ -482,8 +510,20 @@ body{
   .reveal{opacity:1;transform:none}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Wallace Phillip Maclayne",
+  "url":"https://wphillipmaclayne.github.io/WPM-SAP-PORTIFOLIO/",
+  "jobTitle":"Product Designer e Front-End Developer",
+  "knowsAbout":["UX Design","UI Design","Front-End Development","Design Systems","Product Thinking"],
+  "sameAs":["https://www.linkedin.com/in/wpmaclayne/"]
+}
+</script>
 </head>
 <body>
+<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
 
 <!-- Custom cursor -->
 <div class="cursor" id="cursor" aria-hidden="true"></div>
@@ -501,7 +541,7 @@ body{
 <div class="bg-noise" aria-hidden="true"></div>
 <div class="bg-vignette" aria-hidden="true"></div>
 
-<div class="page">
+<main class="page" id="conteudo-principal">
 <div class="container">
 
   <!-- Hero -->
@@ -522,7 +562,7 @@ body{
   <section class="section reveal" aria-label="Projetos">
     <div class="section__header">
       <div class="section__icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
       </div>
       <div class="section__meta">
         <h2 class="section__title">Projetos</h2>
@@ -530,7 +570,7 @@ body{
       </div>
     </div>
     <nav class="links" aria-label="Links de projetos">
-      <a class="link-card link-card--project" href="https://wpm-gestao-interna.vercel.app/" target="_blank" rel="noopener noreferrer">
+      <a class="link-card link-card--project" href="https://wpm-gestao-interna.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="WPM Sistema SAP (abre em nova aba)">
         <span class="link-card__index">01</span>
         <div class="link-card__content">
           <span class="link-card__text">WPM SISTEMA SAP</span>
@@ -538,7 +578,7 @@ body{
         </div>
         <svg class="link-card__arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg>
       </a>
-      <a class="link-card link-card--project" href="https://wphillipmaclayne.github.io/WPM-RECEP-CASE/" target="_blank" rel="noopener noreferrer">
+      <a class="link-card link-card--project" href="https://wphillipmaclayne.github.io/WPM-RECEP-CASE/" target="_blank" rel="noopener noreferrer" aria-label="Estudo de Caso V34 (abre em nova aba)">
         <span class="link-card__index">02</span>
         <div class="link-card__content">
           <span class="link-card__text">ESTUDO DE CASO V34</span>
@@ -546,7 +586,7 @@ body{
         </div>
         <svg class="link-card__arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg>
       </a>
-      <a class="link-card link-card--project" href="https://wphillipmaclayne.github.io/WPM-DOCUMENTACAO-RECEP/" target="_blank" rel="noopener noreferrer">
+      <a class="link-card link-card--project" href="https://wphillipmaclayne.github.io/WPM-DOCUMENTACAO-RECEP/" target="_blank" rel="noopener noreferrer" aria-label="Documentação V34 (abre em nova aba)">
         <span class="link-card__index">03</span>
         <div class="link-card__content">
           <span class="link-card__text">DOCUMENTAÇÃO V34</span>
@@ -554,7 +594,7 @@ body{
         </div>
         <svg class="link-card__arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg>
       </a>
-      <a class="link-card link-card--project" href="https://wphillipmaclayne.github.io/primeiroestudodecaso/" target="_blank" rel="noopener noreferrer">
+      <a class="link-card link-card--project" href="https://wphillipmaclayne.github.io/primeiroestudodecaso/" target="_blank" rel="noopener noreferrer" aria-label="Estudo de Caso V33 (abre em nova aba)">
         <span class="link-card__index">04</span>
         <div class="link-card__content">
           <span class="link-card__text">ESTUDO DE CASO V33</span>
@@ -562,7 +602,7 @@ body{
         </div>
         <svg class="link-card__arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg>
       </a>
-      <a class="link-card link-card--project" href="https://wphillipmaclayne.github.io/primeira-documenta-o-v33/" target="_blank" rel="noopener noreferrer">
+      <a class="link-card link-card--project" href="https://wphillipmaclayne.github.io/primeira-documenta-o-v33/" target="_blank" rel="noopener noreferrer" aria-label="Documentação V33 (abre em nova aba)">
         <span class="link-card__index">05</span>
         <div class="link-card__content">
           <span class="link-card__text">DOCUMENTAÇÃO V33</span>
@@ -577,7 +617,7 @@ body{
   <section class="expertise reveal" aria-label="Expertise">
     <div class="section__header">
       <div class="section__icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       </div>
       <div class="section__meta">
         <h2 class="section__title">Expertise</h2>
@@ -623,7 +663,7 @@ body{
   <section class="section reveal" aria-label="Contato">
     <div class="section__header">
       <div class="section__icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
       </div>
       <div class="section__meta">
         <h2 class="section__title">Contato</h2>
@@ -631,14 +671,14 @@ body{
       </div>
     </div>
     <nav class="links" aria-label="Links de contato">
-      <a class="link-card link-card--contact" href="https://api.whatsapp.com/send/?phone=5531982266089&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+      <a class="link-card link-card--contact" href="https://api.whatsapp.com/send/?phone=5531982266089&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (abre em nova aba)">
         <div class="link-card__content">
           <span class="link-card__text">WhatsApp</span>
           <span class="link-card__sub">Mensagem direta</span>
         </div>
         <svg class="link-card__arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg>
       </a>
-      <a class="link-card link-card--contact" href="https://www.linkedin.com/in/wpmaclayne/" target="_blank" rel="noopener noreferrer">
+      <a class="link-card link-card--contact" href="https://www.linkedin.com/in/wpmaclayne/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (abre em nova aba)">
         <div class="link-card__content">
           <span class="link-card__text">LinkedIn</span>
           <span class="link-card__sub">Perfil profissional</span>
@@ -655,7 +695,7 @@ body{
   </footer>
 
 </div>
-</div>
+</main>
 
 <script>
 (function(){
@@ -667,6 +707,7 @@ body{
   let isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
   if (!isTouch) {
+    document.body.classList.add('has-custom-cursor');
     document.addEventListener('mousemove', e => {
       mx = e.clientX; my = e.clientY;
     });
