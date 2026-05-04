@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WPM Portfólio</title>
-<meta name="description" content="Projetos, estudos de caso, documentação e contato profissional — Wallace Phillip Maclayne">
+<meta name="description" content="Projetos, livro, estudos de caso, documentação e contato profissional — Wallace Phillip Maclayne">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -17,7 +17,11 @@
   --purple-bright:#c084fc;
   --purple-dim:#7c3aed;
   --purple-deep:#6d28d9;
+  --book-gold:#e0b85c;
+  --book-gold-deep:#c89b3c;
+  --book-cyan:#06b6d4;
   --glow:rgba(168,85,247,.3);
+  --book-glow:rgba(224,184,92,.24);
   --text:#f0f0f5;
   --text-dim:rgba(240,240,245,.55);
   --text-muted:rgba(240,240,245,.35);
@@ -333,6 +337,122 @@ body{
   letter-spacing:.03em;
 }
 
+/* ── Featured book ── */
+.book-feature{
+  position:relative;
+  margin-bottom:56px;
+}
+.book-card{
+  position:relative;
+  display:block;
+  padding:28px;
+  border:1px solid rgba(224,184,92,.28);
+  border-radius:var(--radius);
+  background:
+    radial-gradient(circle at 14% 0%,rgba(6,182,212,.12),transparent 36%),
+    linear-gradient(135deg,rgba(224,184,92,.11),rgba(168,85,247,.045) 48%,rgba(255,255,255,.025));
+  box-shadow:
+    0 24px 70px rgba(0,0,0,.28),
+    0 0 0 1px rgba(224,184,92,.055),
+    inset 0 1px 0 rgba(255,255,255,.04);
+  color:var(--text);
+  overflow:hidden;
+}
+.book-card::before{
+  content:'';position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,transparent,rgba(224,184,92,.16),transparent),
+    radial-gradient(circle at 86% 14%,rgba(224,184,92,.18),transparent 30%);
+  opacity:.8;
+  pointer-events:none;
+}
+.book-card__content{
+  position:relative;z-index:1;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.book-card__eyebrow{
+  display:inline-flex;
+  width:max-content;
+  align-items:center;
+  gap:8px;
+  padding:7px 13px;
+  border:1px solid rgba(224,184,92,.34);
+  border-radius:100px;
+  background:rgba(224,184,92,.08);
+  color:var(--book-gold);
+  font-family:'SF Mono',SFMono-Regular,Consolas,monospace;
+  font-size:.66rem;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.book-card__eyebrow::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--book-gold);
+  box-shadow:0 0 12px var(--book-glow);
+}
+.book-card__title{
+  max-width:560px;
+  font-size:clamp(1.9rem,5.6vw,3.2rem);
+  line-height:1.04;
+  letter-spacing:-.035em;
+}
+.book-card__title span{
+  color:var(--book-gold);
+}
+.book-card__text{
+  max-width:560px;
+  color:rgba(240,240,245,.7);
+  font-size:.95rem;
+  line-height:1.75;
+}
+.book-card__meta{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+}
+.book-card__meta span{
+  min-width:0;
+  padding:11px 12px;
+  border:1px solid rgba(224,184,92,.15);
+  border-radius:var(--radius-sm);
+  background:rgba(7,7,13,.32);
+  color:rgba(240,240,245,.72);
+  font-size:.72rem;
+  letter-spacing:.04em;
+}
+.book-card__actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.book-button{
+  display:inline-flex;
+  min-height:46px;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 18px;
+  border:1px solid rgba(224,184,92,.58);
+  border-radius:100px;
+  background:linear-gradient(135deg,var(--book-gold-deep),var(--book-gold));
+  color:#07070d;
+  font-size:.86rem;
+  font-weight:800;
+  text-decoration:none;
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.book-button:hover,.book-button:focus-visible{
+  transform:translateY(-2px);
+  box-shadow:0 14px 40px rgba(224,184,92,.18);
+}
+.book-button--ghost{
+  background:rgba(7,7,13,.28);
+  color:var(--book-gold);
+}
+
 /* ── Contact cards ── */
 .link-card--contact{
   padding:18px 22px;
@@ -460,6 +580,10 @@ body{
   .link-card--project{padding:20px 20px}
   .link-card--contact{padding:16px 18px}
   .link-card__index{display:none}
+  .book-card{padding:24px 20px}
+  .book-card__meta{grid-template-columns:1fr}
+  .book-card__actions{flex-direction:column}
+  .book-button{width:100%}
   .section{margin-bottom:44px}
   .expertise__intro{padding:22px 20px}
   .skills{gap:6px}
@@ -517,6 +641,32 @@ body{
     <p class="hero__author">Wallace Phillip Maclayne</p>
     <div class="hero__divider" aria-hidden="true"></div>
   </header>
+
+  <!-- Livro em destaque -->
+  <section class="book-feature reveal" aria-label="Livro LLMs e Agentes de Código">
+    <article class="book-card">
+      <div class="book-card__content">
+        <span class="book-card__eyebrow">Novo projeto editorial</span>
+        <h2 class="book-card__title">LLMs e Agentes de Código: <span>do zero ao fluxo profissional com IA.</span></h2>
+        <p class="book-card__text">
+          Um livro em português brasileiro sobre como usar modelos de linguagem e agentes de código com método, contexto, limites, validação humana e responsabilidade. A apresentação pública reúne história, arquitetura editorial, versões, identidade visual e acesso ao projeto.
+        </p>
+        <div class="book-card__meta" aria-label="Destaques do livro">
+          <span>Livro técnico e didático</span>
+          <span>Projeto documentado</span>
+          <span>Identidade visual premium</span>
+        </div>
+        <div class="book-card__actions">
+          <a class="book-button" href="https://wphillipmaclayne.github.io/meu-livro-llm-agentes/site-apresentacao/" target="_blank" rel="noopener noreferrer">
+            Ver apresentação do livro
+          </a>
+          <a class="book-button book-button--ghost" href="https://wphillipmaclayne.github.io/meu-livro-llm-agentes/" target="_blank" rel="noopener noreferrer">
+            Abrir projeto publicado
+          </a>
+        </div>
+      </div>
+    </article>
+  </section>
 
   <!-- Projetos -->
   <section class="section reveal" aria-label="Projetos">
